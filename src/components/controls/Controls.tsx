@@ -23,7 +23,9 @@ const Controls: React.FC<ControlsProps> = ({
 
   useEffect(() => {
     onCenterBoard();
-  }, [onCenterBoard]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleNumberClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
