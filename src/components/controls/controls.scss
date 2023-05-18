@@ -1,0 +1,29 @@
+.control-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #696969;
+  background-color: #fdfcff;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.control-element:hover {
+  background-color: #d1d4da;
+  color: #f5f7fb;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  cursor: pointer;
+}
