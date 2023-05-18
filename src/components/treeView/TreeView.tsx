@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './treeView.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
