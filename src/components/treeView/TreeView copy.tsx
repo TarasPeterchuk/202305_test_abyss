@@ -185,7 +185,7 @@ const TreeView: React.FC = () => {
 
   const renderCategory = (category: Category | CategoryNode) => {
     return (
-      <div key={category.id} className="category-list-elem">
+      <li key={category.id} className="category-list-elem">
         <div className="category">
           {'isEditing' in category && category.isEditing ? (
             <>
@@ -226,21 +226,18 @@ const TreeView: React.FC = () => {
           )}
         </div>
         {category.subcategories.length > 0 && (
-          <>
-            <div className="line"></div>
-            <div className="categories">
-              {category.subcategories.map((subCategory) =>
-                renderCategory(subCategory)
-              )}
-            </div>
-          </>
+          <ul>
+            {category.subcategories.map((subCategory) =>
+              renderCategory(subCategory)
+            )}
+          </ul>
         )}
-      </div>
+      </li>
     );
   };
 
   return (
-    <>
+    <div className="category-grid">
       <div className="category">
         <h2>Categories</h2>
         <div
@@ -250,10 +247,8 @@ const TreeView: React.FC = () => {
           <FontAwesomeIcon icon={faCirclePlus} />
         </div>
       </div>
-      <div className="categories">
-        {categories.map((category) => renderCategory(category))}
-      </div>
-    </>
+      <ul>{categories.map((category) => renderCategory(category))}</ul>
+    </div>
   );
 };
 
