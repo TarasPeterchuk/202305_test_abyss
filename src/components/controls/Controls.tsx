@@ -21,7 +21,7 @@ const Controls: React.FC<ControlsProps> = ({
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  useEffect(() => onCenterBoard());
+  useEffect(() => onCenterBoard(), []);
   const handleNumberClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
