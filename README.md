@@ -9,8 +9,8 @@
 
 Main features:
 
-- add Caegories with an infinite number of subcategories
-- remove Caegories
+- add Categories with an infinite number of subcategories
+- remove Categories
 - scale board
 - move board
 
