@@ -1,4 +1,4 @@
-# Caegories board - react project
+# Categories board - react project
 
 ### [Site link](https://categories-board.netlify.app/)
 
