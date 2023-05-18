@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlus,
@@ -21,6 +21,7 @@ const Controls: React.FC<ControlsProps> = ({
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  useEffect(() => onCenterBoard(), []);
   const handleNumberClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };

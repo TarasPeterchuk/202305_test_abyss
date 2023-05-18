@@ -65,8 +65,6 @@ const TreeView: React.FC = () => {
   const [categories, setCategories] =
     useState<CategoryNode[]>(initialCategories);
 
-  useEffect(() => console.log(categories), [categories]);
-
   const handleCreateCategory = (parentId: string | null) => {
     setCategories((prevCategories) => {
       const newCategory: CategoryNode = {
