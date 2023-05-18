@@ -1,0 +1,12 @@
+.category-grid {
+  display: flex;
+  flex-direction: column;
+}
+.category {
+  display: flex;
+  align-items: center;
+}
+
+.category-list-elem {
+  list-style-type: none;
+}

@@ -4,6 +4,7 @@ import {
   faPlus,
   faMinus,
   faArrowsToCircle,
+  faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import './controls.scss';
 
@@ -48,11 +49,14 @@ const Controls: React.FC<ControlsProps> = ({
     for (let i = 10; i <= 150; i += 10) {
       options.push(
         <div
-          className="control-element"
+          className="control-element scale-lis-element"
           key={i}
           onClick={() => handleOptionClick(i)}
         >
           {i}%
+          {scale === i && (
+            <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faCheck} />
+          )}
         </div>
       );
     }
@@ -60,33 +64,15 @@ const Controls: React.FC<ControlsProps> = ({
   };
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignContent: 'center',
-        justifyContent: 'flex-end',
-        marginBottom: '10px',
-        background: '#f5f7fb',
-        height: '50px',
-      }}
-    >
-      <div
-        className="control-element button"
-        onClick={onCenterBoard}
-        style={{ marginRight: '20px', marginLeft: '5px' }}
-      >
+    <div className="controls-bar">
+      <div className="control-element button" onClick={onCenterBoard}>
         <FontAwesomeIcon icon={faArrowsToCircle} />
       </div>
 
       <div
         className="control-element button"
         onClick={handleDecreaseClick}
-        style={{ marginLeft: '5px' }}
+        style={{ marginLeft: '15px' }}
       >
         <FontAwesomeIcon icon={faMinus} />
       </div>
@@ -106,7 +92,7 @@ const Controls: React.FC<ControlsProps> = ({
       <div
         className="control-element button"
         onClick={handleIncreaseClick}
-        style={{ marginLeft: '5px' }}
+        style={{ marginLeft: '5px', marginRight: '15px' }}
       >
         <FontAwesomeIcon icon={faPlus} />
       </div>

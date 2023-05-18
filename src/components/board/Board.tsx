@@ -1,4 +1,5 @@
 import React from 'react';
+import TreeView from '../treeView/TreeView';
 
 interface Position {
   x: number;
@@ -38,23 +39,10 @@ const Board: React.FC<BoardProps> = ({
         transform: `scale(${scale / 100})`,
         transformOrigin: 'top left',
         cursor: 'move',
-
         whiteSpace: 'nowrap',
       }}
     >
-      <span>Text in rectangle</span>
-      <button
-        style={{
-          border: 'none',
-          backgroundColor: 'blue',
-          color: 'white',
-          padding: '5px 10px',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
-      >
-        +
-      </button>
+      <TreeView />
     </div>
   );
 };

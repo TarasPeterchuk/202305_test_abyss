@@ -1,3 +1,19 @@
+.controls-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  background: #f5f7fb;
+  height: 50px;
+  border-bottom: 1px solid #a7a7a7;
+  z-index: 1;
+}
+
 .control-element {
   display: flex;
   justify-content: center;
@@ -21,9 +37,17 @@
 .dropdown {
   position: absolute;
   top: 40px;
-  right: 40px;
+  right: 30px;
+
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 50px;
+  width: 80px;
   cursor: pointer;
+}
+
+.scale-lis-element {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+  height: 20px;
 }
