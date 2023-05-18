@@ -35,15 +35,13 @@
 
 .container {
   position: relative;
-  /* Add other styles as needed */
 }
 
 .line {
   position: absolute;
   top: -10px;
   left: 50%;
-  // transform: translateX(-50%);
   height: 20px;
   width: 3px;
-  background-color: rgb(155, 155, 155);
+  background-color: #9b9b9b;
 }
