@@ -183,45 +183,48 @@ const TreeView: React.FC = () => {
 
   const renderCategory = (category: Category | CategoryNode) => {
     return (
-      <div key={category.id} className="category-list-elem">
-        <div className="category">
-          {'isEditing' in category && category.isEditing ? (
-            <>
-              <input
-                type="text"
-                value={category.name}
-                onChange={(event) => handleInputChange(event, category.id)}
-              />
-              <div
-                className="control-element button"
-                onClick={() => handleSaveCategory(category.id)}
-              >
-                <FontAwesomeIcon icon={faCircleCheck} />
-              </div>
-            </>
-          ) : (
-            <>
-              {category.name}
-              <div
-                className="control-element button"
-                onClick={() => handleCreateCategory(category.id)}
-              >
-                <FontAwesomeIcon icon={faCirclePlus} />
-              </div>
-              <div
-                className="control-element button"
-                onClick={() => handleRenameCategory(category.id)}
-              >
-                <FontAwesomeIcon icon={faPen} />
-              </div>
-              <div
-                className="control-element button"
-                onClick={() => handleDeleteCategory(category.id)}
-              >
-                <FontAwesomeIcon icon={faCircleXmark} />
-              </div>
-            </>
-          )}
+      <div key={category.id} className="container">
+        <div className="line"></div>
+        <div className="category-list-elem">
+          <div className="category">
+            {'isEditing' in category && category.isEditing ? (
+              <>
+                <input
+                  type="text"
+                  value={category.name}
+                  onChange={(event) => handleInputChange(event, category.id)}
+                />
+                <div
+                  className="action-button"
+                  onClick={() => handleSaveCategory(category.id)}
+                >
+                  <FontAwesomeIcon icon={faCircleCheck} />
+                </div>
+              </>
+            ) : (
+              <>
+                {category.name}
+                <div
+                  className="action-button"
+                  onClick={() => handleCreateCategory(category.id)}
+                >
+                  <FontAwesomeIcon icon={faCirclePlus} />
+                </div>
+                <div
+                  className="action-button"
+                  onClick={() => handleRenameCategory(category.id)}
+                >
+                  <FontAwesomeIcon icon={faPen} />
+                </div>
+                <div
+                  className="action-button"
+                  onClick={() => handleDeleteCategory(category.id)}
+                >
+                  <FontAwesomeIcon icon={faCircleXmark} />
+                </div>
+              </>
+            )}
+          </div>
         </div>
         {category.subcategories.length > 0 && (
           <>
@@ -242,7 +245,7 @@ const TreeView: React.FC = () => {
       <div className="category">
         <h2>Categories</h2>
         <div
-          className="control-element button"
+          className="action-button"
           onClick={() => handleCreateCategory(null)}
         >
           <FontAwesomeIcon icon={faCirclePlus} />
